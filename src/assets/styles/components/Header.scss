@@ -1,0 +1,30 @@
+@import "../vars.scss";
+
+.header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header__img {
+  width: 250px;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__title {
+  font-family: $theme-font;
+  text-align: center;
+}
+
+.header__paragraph {
+  font-family: $theme-font;
+  color: #707070;
+  text-align: center;
+}

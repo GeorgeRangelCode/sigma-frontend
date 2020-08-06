@@ -1,0 +1,10 @@
+@import "./vars.scss";
+
+body {
+  margin: 0;
+  font-family: $theme-font;
+}
+
+* {
+  box-sizing: border-box;
+}

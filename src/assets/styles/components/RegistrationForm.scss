@@ -1,0 +1,28 @@
+@import "../vars.scss";
+
+.form-registration {
+  border-radius: 15px 30px 30px 30px;
+  box-shadow: 4px 6px 15px 2px rgba(0, 0, 0, 0.2);
+  padding: 12% 10%;
+}
+
+.btn-send {
+  background-color: #e03b65;
+  border: none;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 130px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin-top: 30px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 24px;
+  background: url("https://i.ibb.co/XDs6L2L/Anotaci-n-2020-08-05-215331.png")
+    100% 50% no-repeat #fff;
+}
