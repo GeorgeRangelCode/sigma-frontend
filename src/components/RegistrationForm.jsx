@@ -20,8 +20,7 @@ export const RegistrationForm = ({ departments, data }) => {
           await api.contacts.create(values);
           Swal.fire({
             title: "Registro exitoso",
-            text:
-              "Tu registro ha sido guardado con éxito pronto te contactaremos.",
+            text: "Tu información ha sido recibida satisfactoriamente.",
           });
           actions.resetForm();
         } catch (error) {
