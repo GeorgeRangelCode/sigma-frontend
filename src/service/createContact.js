@@ -1,6 +1,6 @@
 const BASE_URL = "https://sigma-backend.georgerangelcode.vercel.app/api";
 
-async function callApi(endpoint, options = {}) {
+export const callApi = async (endpoint, options = {}) => {
   options.headers = {
     "Content-Type": "application/json",
     Accept: "application/json",
@@ -10,7 +10,7 @@ async function callApi(endpoint, options = {}) {
   const data = await response.json();
 
   return data;
-}
+};
 
 const api = {
   contacts: {

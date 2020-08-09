@@ -2,10 +2,11 @@ import React from "react";
 import "../assets/styles/components/RegistrationForm.scss";
 import { Formik, Form, Field } from "formik";
 import { ContactSchema } from "../schema/ContactSchema";
-import api from "../service/createContact";
-import Swal from "sweetalert2";
+import { useRegistration } from "../hooks/useRegistration";
 
 export const RegistrationForm = ({ departments, data }) => {
+  const { onSubmit } = useRegistration();
+
   return (
     <Formik
       initialValues={{
@@ -15,18 +16,7 @@ export const RegistrationForm = ({ departments, data }) => {
         email: "",
       }}
       validationSchema={ContactSchema}
-      onSubmit={async (values, actions) => {
-        try {
-          await api.contacts.create(values);
-          Swal.fire({
-            title: "Registro exitoso",
-            text: "Tu información ha sido recibida satisfactoriamente.",
-          });
-          actions.resetForm();
-        } catch (error) {
-          console.log("RegistrationForm -> error", error);
-        }
-      }}
+      onSubmit={onSubmit}
     >
       {({ errors, touched, isSubmitting, values }) => (
         <Form className="form-registration">
